@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Token | {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-6 mx-auto p-3 mt-5 border rounded shadow-lg">
+        <h1>Hurray your mail is verified</h1>
+        <p>Please login</p>
+        <a class='btn btn-primary' href="{% url "LoginNm" %}">Login</a>
+    </div>
+</div>
+{% endblock %}

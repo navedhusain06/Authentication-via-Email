@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login Page | 
+{% endblock %}
+
+{% block content %}
+<div class="col-6 mx-auto mt-5 border p-3 shadow-lg rounded">
+    <h1 class='text-center my-3 pb-3 text-success-emphasis'>Login Form</h1>
+<form method='post'>
+  {% include "alert.html" %}
+  {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">User Name</label>
+      <input type="text" class="form-control" name='username' placeholder="username">
+      
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" name='password' placeholder="********">
+    </div>
+    <div class="mb-3 form-check">
+      {% comment %} <input type="checkbox" class="form-check-input" id="exampleCheck1"> {% endcomment %}
+      <a href="#">Forgot Password</a>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+{% endblock %}
